@@ -1,0 +1,45 @@
+# Main script - Global settings and entry point
+# DERELICT: A Short Escape
+
+# Assets used:
+#   bg black.png
+#   bg cargo_bay_dark.png
+#   bg cargo_bay.png
+#   bg cargo_walkway.png
+#   bg corridor_dark.png
+#   bg corridor_escape.png
+#   bg cryo_room.png
+#   bg escape_pod_bay.png
+#   bg escape_pod_interior.png
+#   bg maintenance_shaft.png
+#   bg medical_corridor.png
+#   bg medical_wing.png
+#   bg rescue_ship.png
+#   bg space.png
+#   bg terminal.png
+#   font game_font.ttf 28
+#   music ambient_ship.ogg
+#   music ending_theme.ogg
+#   music silence.ogg
+#   music tension.ogg
+#   titlebg title_bg.png
+#   titlemusic title_theme.ogg
+#   typing key.ogg
+
+_start:
+    # Title screen setup (replace with your own assets)
+    titlebg title_bg.png
+    titlemusic title_theme.ogg
+    
+    # Global settings
+    typing key.ogg
+    font DejaVuSans.ttf 28
+    uicolor #4D4D80
+    
+    # Character aliases
+    alias ??? Unknown Voice
+    alias AI ARIA-7
+    alias Protagonist You
+    
+    # Start the game
+    goto intro
