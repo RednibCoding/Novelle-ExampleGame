@@ -120,20 +120,25 @@ text Welcome to the game!
 
 ### Saving Progress
 
-Use the `savegame` command to save the player's progress. It stores the current label name to disk.
+Use the `savegame` command to save the player's progress. It stores **only the current label name** to disk.
 
-**Best practice:** Place `savegame` after setting up the scene so the player sees the correct background, character, and music when continuing:
+**Important:** When the player continues, the game jumps directly to the saved label. Any background, music, or character state set in previous labels will **not** be restored automatically. You must set up the scene at the beginning of each label that contains a `savegame`.
+
+**Best practice:** Always set background and music at the start of a label with `savegame`:
 
 ```
 label chapter2
+# Set up the scene for this label
 background forest
+music adventure.ogg
 characterA Alex
 mood determined
-music adventure.ogg
 savegame
 
 text The journey continues...
 ```
+
+**Don't worry about double-loading:** The engine automatically skips loading if the same background or music is already active. So when playing through normally (not from Continue), the commands won't reload assets that are already displayed/playing.
 
 ### The Load Menu
 
@@ -308,8 +313,9 @@ finish
 ```
 # My Visual Novel - Main Entry Point
 
-label _start
+include chapter1 endings
 
+label _setup
 # Global settings
 typing key.ogg
 
@@ -317,6 +323,7 @@ typing key.ogg
 alias MC Player
 alias Friend Best Friend
 
+label _start
 # Start the story
 goto intro
 
@@ -341,12 +348,14 @@ branch How do you respond?
 - dismissive Shrug it off
 
 label curious
+savegame
 characterA MC
 mood excited
 text Tell me everything!
 goto story_continues
 
 label dismissive
+savegame
 characterA MC
 mood default
 text I'm sure it's nothing important.
@@ -378,7 +387,7 @@ finish
 
 3. **Test frequently**: Run the engine often to catch typos in labels and file references.
 
-4. **Use `mood none`**: To hide the character sprite while keeping their name in the dialog box.
+4. **Use `mood` with no argument**: To hide the character sprite while keeping their name in the dialog box.
 
 ---
 
@@ -400,8 +409,35 @@ finish
 
 | Input | Action |
 |-------|--------|
-| Space / Enter / Click | Advance dialogue / Select option |
+| Space / Enter / Click / Touch | Advance dialogue / Select option |
 | 1 / 2 | Select choice 1 or 2 directly |
+
+---
+
+## Platform Notes
+
+### Desktop
+Run the executable with the `data/` folder in the same directory:
+```bash
+./novelle-linux-amd64
+```
+
+The engine always looks for a `data/` folder in the current working directory.
+
+### Web (WASM)
+The `dist/web/` folder contains everything needed:
+- `novelle.wasm` - The engine (uncompressed)
+- `novelle.wasm.gz` - The engine (compressed, ~5MB)
+- `wasm_exec.js` - Go WASM runtime
+- `index.html` - Loader that auto-decompresses the gzipped WASM
+- `data/` - Your game assets
+
+Serve with any HTTP server:
+```bash
+cd dist/web && python3 -m http.server 8080
+```
+
+The compressed version is loaded automatically - browsers that support `DecompressionStream` will use the 5MB gzipped file instead of the 22MB uncompressed one.
 
 ---
 
