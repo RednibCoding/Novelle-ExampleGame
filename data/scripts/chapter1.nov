@@ -2,165 +2,164 @@
 # The player wakes up in a damaged cryo pod
 
 label intro
-background
+    background
 
-characterA ???
-text ...ystem reboot... emergency protocol...
-text ...vital signs detected... initiating revival sequence...
+    characterA ???
+    text ...ystem reboot... emergency protocol...
+    text ...vital signs detected... initiating revival sequence...
 
-hideoverlay
+    hideoverlay
 
-fade 1.0 ...
+    fade 1.0 ...
 
 
-background cryo_room
-music ambient_ship.ogg
+    background cryo_room
+    music ambient_ship.ogg
 
-characterA Protagonist
-mood weak
-text Ugh... my head...
-text It feels like someone filled my skull with broken glass.
-text Where am I? Everything hurts.
+    characterA Protagonist
+    mood weak
+    text Ugh... my head...
+    text It feels like someone filled my skull with broken glass.
+    text Where am I? Everything hurts.
 
-text The air is cold. Too cold. And there's a smell...
-text Burnt plastic. Ozone. Something else I don't want to identify.
+    text The air is cold. Too cold. And there's a smell...
+    text Burnt plastic. Ozone. Something else I don't want to identify.
 
-text I try to move, but my limbs feel like lead.
-text How long have I been asleep?
+    text I try to move, but my limbs feel like lead.
+    text How long have I been asleep?
 
-characterB AI
-text Crew member detected. Initiating status report.
-text Please remain calm. Your body is recovering from extended cryogenic stasis.
-text You have been in cryogenic stasis for approximately 847 days.
+    characterB AI
+    text Crew member detected. Initiating status report.
+    text Please remain calm. Your body is recovering from extended cryogenic stasis.
+    text You have been in cryogenic stasis for approximately 847 days.
 
-characterA Protagonist
-mood weak
-text 847 days?! That's... over two years!
-text That can't be right. The mission was only supposed to be 6 months!
+    characterA Protagonist
+    mood weak
+    text 847 days?! That's... over two years!
+    text That can't be right. The mission was only supposed to be 6 months!
 
-characterB AI
-text Correct. The original mission parameters have been... significantly altered.
-text Emergency revival was triggered due to critical ship damage.
-text Life support failing. Estimated time remaining: 45 minutes.
+    characterB AI
+    text Correct. The original mission parameters have been... significantly altered.
+    text Emergency revival was triggered due to critical ship damage.
+    text Life support failing. Estimated time remaining: 45 minutes.
 
-characterA Protagonist
-mood weak
-text 45 minutes? That's all I have?
-text This has to be some kind of nightmare.
+    characterA Protagonist
+    mood weak
+    text 45 minutes? That's all I have?
+    text This has to be some kind of nightmare.
 
-characterB AI
-text I assure you, this situation is very real.
-text I recommend focusing on survival. I will assist you.
+    characterB AI
+    text I assure you, this situation is very real.
+    text I recommend focusing on survival. I will assist you.
 
-branch What do you do?
-- ask_ship Ask about the ship
-- ask_crew Ask about the crew
+    branch What do you do?
+    - ask_ship Ask about the ship
+    - ask_crew Ask about the crew
 
 label ask_ship
+    characterA Protagonist
+    mood weak
+    text What happened to the ship?
+    text Why am I waking up two years late?
 
-characterA Protagonist
-mood weak
-text What happened to the ship?
-text Why am I waking up two years late?
+    characterB AI
+    text The USV Meridian suffered a catastrophic collision with uncharted debris.
+    text The debris field was not on any navigational charts.
+    text Initial impact occurred 847 days, 14 hours, and 23 minutes ago.
 
-characterB AI
-text The USV Meridian suffered a catastrophic collision with uncharted debris.
-text The debris field was not on any navigational charts.
-text Initial impact occurred 847 days, 14 hours, and 23 minutes ago.
+    characterA Protagonist
+    mood weak
+    text A debris field? In deep space?
 
-characterA Protagonist
-mood weak
-text A debris field? In deep space?
+    characterB AI
+    text Hull breaches detected on decks 3 through 7. Primary reactor offline.
+    text Backup power at 12% and declining.
+    text The ship has been slowly dying since the collision.
 
-characterB AI
-text Hull breaches detected on decks 3 through 7. Primary reactor offline.
-text Backup power at 12% and declining.
-text The ship has been slowly dying since the collision.
+    characterA Protagonist
+    mood weak
+    text Slowly dying... for over two years?
+    text Is there any way to fix it?
 
-characterA Protagonist
-mood weak
-text Slowly dying... for over two years?
-text Is there any way to fix it?
+    characterB AI
+    text Negative. Structural integrity is compromised beyond repair.
+    text I have been maintaining minimal life support while searching for survivors.
+    text You are the first to revive successfully.
+    text Recommended course of action: evacuation via escape pod.
 
-characterB AI
-text Negative. Structural integrity is compromised beyond repair.
-text I have been maintaining minimal life support while searching for survivors.
-text You are the first to revive successfully.
-text Recommended course of action: evacuation via escape pod.
+    characterA Protagonist
+    mood weak
+    text The first to revive... what about the others?
 
-characterA Protagonist
-mood weak
-text The first to revive... what about the others?
+    characterB AI
+    text ...
+    text We should focus on your evacuation.
 
-characterB AI
-text ...
-text We should focus on your evacuation.
-
-goto cryo_exit
+    goto cryo_exit
 
 label ask_crew
-characterA Protagonist
-mood weak
-text What about the rest of the crew?
-text There were 24 of us. Where is everyone?
+    characterA Protagonist
+    mood weak
+    text What about the rest of the crew?
+    text There were 24 of us. Where is everyone?
 
-characterB AI
-text ...
+    characterB AI
+    text ...
 
-text I have been dreading this question.
-text Of the 24 crew members aboard, you are the only survivor.
+    text I have been dreading this question.
+    text Of the 24 crew members aboard, you are the only survivor.
 
-characterA Protagonist
-mood weak
-text What? No, that's... that's impossible!
+    characterA Protagonist
+    mood weak
+    text What? No, that's... that's impossible!
 
-characterB AI
-text Cryo pod malfunctions claimed 19 lives.
-text The power fluctuations from the collision caused cascade failures.
-text I tried to reroute power, but I could not save them all.
-text I could barely save you.
+    characterB AI
+    text Cryo pod malfunctions claimed 19 lives.
+    text The power fluctuations from the collision caused cascade failures.
+    text I tried to reroute power, but I could not save them all.
+    text I could barely save you.
 
-characterA Protagonist
-mood weak
-text And the remaining 4?
+    characterA Protagonist
+    mood weak
+    text And the remaining 4?
 
-characterB AI
-text Their life signs terminated during the initial collision.
-text Captain Reyes was on the bridge. Engineer Tanaka in the reactor room.
-text Doctors Chen and Vasquez in the medical wing.
-text They died instantly. I... I am sorry. I was unable to protect them.
+    characterB AI
+    text Their life signs terminated during the initial collision.
+    text Captain Reyes was on the bridge. Engineer Tanaka in the reactor room.
+    text Doctors Chen and Vasquez in the medical wing.
+    text They died instantly. I... I am sorry. I was unable to protect them.
 
-characterA Protagonist
-mood weak
-text Captain Reyes... Tanaka... 
-text I knew them. I had dinner with them the night before we went into cryo.
-text ...I see.
+    characterA Protagonist
+    mood weak
+    text Captain Reyes... Tanaka... 
+    text I knew them. I had dinner with them the night before we went into cryo.
+    text ...I see.
 
-characterB AI
-text I understand if you need a moment.
-text But time is limited. We must proceed.
+    characterB AI
+    text I understand if you need a moment.
+    text But time is limited. We must proceed.
 
-goto cryo_exit
+    goto cryo_exit
 
 label cryo_exit
-characterA Protagonist
-mood weak
-text I need to find the escape pod. Where is it?
-text Just tell me where to go.
+    characterA Protagonist
+    mood weak
+    text I need to find the escape pod. Where is it?
+    text Just tell me where to go.
 
-characterB AI
-text Escape pod bay is located on Deck 2, Section C.
-text Under normal circumstances, it would be a 3 minute walk.
-text However... Warning: Direct route is blocked by debris.
+    characterB AI
+    text Escape pod bay is located on Deck 2, Section C.
+    text Under normal circumstances, it would be a 3 minute walk.
+    text However... Warning: Direct route is blocked by debris.
 
-characterA Protagonist
-mood weak
-text Of course it is. What are my options?
+    characterA Protagonist
+    mood weak
+    text Of course it is. What are my options?
 
-characterB AI
-text I have analyzed the structural integrity of all possible paths.
-text You will need to navigate through the cargo bay or the medical wing.
+    characterB AI
+    text I have analyzed the structural integrity of all possible paths.
+    text You will need to navigate through the cargo bay or the medical wing.
 
-branch Which path do you choose?
-- cargo_entrance Go through the cargo bay
-- medical_entrance Go through the medical wing
+    branch Which path do you choose?
+    - cargo_entrance Go through the cargo bay
+    - medical_entrance Go through the medical wing

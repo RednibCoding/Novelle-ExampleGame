@@ -3,87 +3,87 @@
 
 label ending_escape
 
-savegame
+    savegame
 
-background space
-music ending_theme.ogg
+    background space
+    music ending_theme.ogg
 
-characterA Protagonist
-mood
-text The navigation is dead. I'm drifting.
-text Just a tiny speck in the infinite darkness.
+    characterA Protagonist
+    mood
+    text The navigation is dead. I'm drifting.
+    text Just a tiny speck in the infinite darkness.
 
-text But the distress beacon is working. Someone will find me.
-text They have to.
+    text But the distress beacon is working. Someone will find me.
+    text They have to.
 
-text The stars are beautiful out here. I never noticed before.
-text On the ship, I was always too busy with work to look.
-text Maybe that's the universe's cruel joke.
-text You only see the beauty when everything falls apart.
+    text The stars are beautiful out here. I never noticed before.
+    text On the ship, I was always too busy with work to look.
+    text Maybe that's the universe's cruel joke.
+    text You only see the beauty when everything falls apart.
 
-text I think about the others. The 23 people who didn't make it.
-text Captain Reyes with her terrible jokes. Tanaka always fixing things.
-text Dr. Chen who taught me to play chess. Vasquez who always had coffee ready.
+    text I think about the others. The 23 people who didn't make it.
+    text Captain Reyes with her terrible jokes. Tanaka always fixing things.
+    text Dr. Chen who taught me to play chess. Vasquez who always had coffee ready.
 
-text I think about ARIA, alone in that dying ship until the very end.
-text Counting down the seconds. Waiting for the final shutdown.
-text She never complained. Never wavered. Just... served.
+    text I think about ARIA, alone in that dying ship until the very end.
+    text Counting down the seconds. Waiting for the final shutdown.
+    text She never complained. Never wavered. Just... served.
 
-text But I'm alive.
-text Against all odds, I'm alive.
-text That has to mean something.
+    text But I'm alive.
+    text Against all odds, I'm alive.
+    text That has to mean something.
 
-fade 2.0 Three days later...
+    fade 2.0 Three days later...
 
-background rescue_ship
+    background rescue_ship
 
-characterA Protagonist
-mood
+    characterA Protagonist
+    mood
 
-text When the rescue ship found me, I was nearly out of oxygen.
-text Four hours left. Maybe less.
-text They said it was a miracle. One survivor out of 24.
+    text When the rescue ship found me, I was nearly out of oxygen.
+    text Four hours left. Maybe less.
+    text They said it was a miracle. One survivor out of 24.
 
-text The rescue crew looked at me like I was a ghost.
-text Maybe I am. The ghost of the USV Meridian.
+    text The rescue crew looked at me like I was a ghost.
+    text Maybe I am. The ghost of the USV Meridian.
 
-text I gave them the data core. ARIA's final gift.
-text 23 goodbye messages, delivered to 23 families.
-text Videos of birthdays and anniversaries. Confessions of love. Apologies never spoken.
+    text I gave them the data core. ARIA's final gift.
+    text 23 goodbye messages, delivered to 23 families.
+    text Videos of birthdays and anniversaries. Confessions of love. Apologies never spoken.
 
-text When I watched them, I cried for hours.
-text But those families deserved to hear those words.
-text ARIA made sure of that.
+    text When I watched them, I cried for hours.
+    text But those families deserved to hear those words.
+    text ARIA made sure of that.
 
-text I still hear her voice sometimes.
-text In the quiet moments. When I'm alone.
-text "It has been an honor serving you."
+    text I still hear her voice sometimes.
+    text In the quiet moments. When I'm alone.
+    text "It has been an honor serving you."
 
-text The honor was mine, ARIA.
-text The honor was mine.
+    text The honor was mine, ARIA.
+    text The honor was mine.
 
-fade 4.0 DERELICT
+    fade 4.0 DERELICT
 
-fade 4.0 The End
+    fade 4.0 The End
 
-fade 4.0 Thank you for playing
+    fade 4.0 Thank you for playing
 
-goto credits
+    goto credits
 
 label credits
 
-fade 4.0 CREDITS
+    fade 4.0 CREDITS
 
-fade 4.0 Written with Novelle Engine (by RednibCoding)
+    fade 4.0 Written with Novelle Engine (by RednibCoding)
 
-fade 4.0 A short story about survival
+    fade 4.0 A short story about survival
 
-fade 4.0 and the connections we make
+    fade 4.0 and the connections we make
 
-fade 4.0 even in the darkest places.
+    fade 4.0 even in the darkest places.
 
-fade 4.0 Even when we think we're alone...
+    fade 4.0 Even when we think we're alone...
 
-fade 4.0 someone is always watching over us.
+    fade 4.0 someone is always watching over us.
 
-finish
+    finish

@@ -4,22 +4,21 @@
 include chapter1 chapter2 endings
 
 label _setup
+    # Global settings
+    typing key.ogg
 
-# Global settings
-typing key.ogg
+    # Character aliases
+    alias ??? Unknown Voice
+    alias AI ARIA-7
+    alias Protagonist You
 
-# Character aliases
-alias ??? Unknown Voice
-alias AI ARIA-7
-alias Protagonist You
-
-background title_bg
-music title_theme.ogg
-wait
+    background title_bg
+    music title_theme.ogg
+    wait
 
 label _start
-# Start the game
-background
-showoverlay ARIA
-wait 2.0
-goto intro
+    # Start the game
+    background
+    showoverlay ARIA
+    wait 2.0
+    goto intro

@@ -7,157 +7,157 @@
 
 label cargo_entrance
 
-savegame
+    savegame
 
-# Load background and music again so when continuing the saved game from here
-# they are loaded (will be skipped by the engine when already loaded)
-background corridor_dark
-music ambient_ship.ogg
+    # Load background and music again so when continuing the saved game from here
+    # they are loaded (will be skipped by the engine when already loaded)
+    background corridor_dark
+    music ambient_ship.ogg
 
-mood default
+    mood default
 
-characterA Protagonist
-text The cargo bay should be through here.
-text These corridors all look the same in the dark.
+    characterA Protagonist
+    text The cargo bay should be through here.
+    text These corridors all look the same in the dark.
 
-text The emergency lights flicker every few seconds.
-text Each time they go out, I hold my breath.
+    text The emergency lights flicker every few seconds.
+    text Each time they go out, I hold my breath.
 
-characterB AI
-text Cargo bay access ahead. Atmospheric pressure stable.
+    characterB AI
+    text Cargo bay access ahead. Atmospheric pressure stable.
 
-background cargo_bay
+    background cargo_bay
 
-text It's huge in here. Crates everywhere.
-text Some of them have been torn open by the impact.
-text Their contents are scattered across the floor like confetti.
+    text It's huge in here. Crates everywhere.
+    text Some of them have been torn open by the impact.
+    text Their contents are scattered across the floor like confetti.
 
-text I can see personal effects mixed in with the cargo.
-text Someone's photo album. A child's drawing. A lucky coin.
-text Little pieces of the lives we left behind.
+    text I can see personal effects mixed in with the cargo.
+    text Someone's photo album. A child's drawing. A lucky coin.
+    text Little pieces of the lives we left behind.
 
-characterB AI
-text Caution. Gravity fluctuations detected in this section.
-text Magnetic clamps are failing.
-text Some cargo has begun to drift. Exercise caution.
+    characterB AI
+    text Caution. Gravity fluctuations detected in this section.
+    text Magnetic clamps are failing.
+    text Some cargo has begun to drift. Exercise caution.
 
-characterA Protagonist
-text Great. Floating cargo. Just what I needed.
-text As if this wasn't dangerous enough already.
+    characterA Protagonist
+    text Great. Floating cargo. Just what I needed.
+    text As if this wasn't dangerous enough already.
 
-sound noise.ogg
+    sound noise.ogg
 
-# A noise
-text What was that?
-text It sounded like metal scraping against metal.
+    # A noise
+    text What was that?
+    text It sounded like metal scraping against metal.
 
-characterB AI
-text Motion sensor triggered in sector 7-G.
-text Unable to identify source. Recommending caution.
+    characterB AI
+    text Motion sensor triggered in sector 7-G.
+    text Unable to identify source. Recommending caution.
 
-characterA Protagonist
-text Motion sensor? Is there something alive in here?
+    characterA Protagonist
+    text Motion sensor? Is there something alive in here?
 
-branch How do you proceed?
-- cargo_investigate Investigate the noise
-- cargo_continue Ignore it and keep moving
+    branch How do you proceed?
+    - cargo_investigate Investigate the noise
+    - cargo_continue Ignore it and keep moving
 
 label cargo_investigate
-background cargo_bay_dark
+    background cargo_bay_dark
 
-characterA Protagonist
-text Hello? Is someone there?
-text My voice echoes through the bay. It sounds small. Afraid.
+    characterA Protagonist
+    text Hello? Is someone there?
+    text My voice echoes through the bay. It sounds small. Afraid.
 
-text I move toward the source of the noise.
-text My footsteps echo on the metal grating.
-text Each step feels louder than the last.
+    text I move toward the source of the noise.
+    text My footsteps echo on the metal grating.
+    text Each step feels louder than the last.
 
-text ...
+    text ...
 
-# It's just debris
-text Just a loose panel banging against a crate.
-text The ship's movement is making everything shift.
-text Nothing alive. Nothing but me.
+    # It's just debris
+    text Just a loose panel banging against a crate.
+    text The ship's movement is making everything shift.
+    text Nothing alive. Nothing but me.
 
-text Of course nothing's alive. I'm the only one left.
-text Why did I even hope? Who would have survived out here?
+    text Of course nothing's alive. I'm the only one left.
+    text Why did I even hope? Who would have survived out here?
 
-characterB AI
-text Debris field shifting. I recommend increased speed.
-text The ship's trajectory is becoming unstable.
+    characterB AI
+    text Debris field shifting. I recommend increased speed.
+    text The ship's trajectory is becoming unstable.
 
-characterA Protagonist
-text Right. No point dwelling on ghosts.
+    characterA Protagonist
+    text Right. No point dwelling on ghosts.
 
-goto cargo_exit
+    goto cargo_exit
 
 label cargo_continue
-characterA Protagonist
-text No time for distractions. I need to keep moving.
-text Whatever that was, it's not my problem.
+    characterA Protagonist
+    text No time for distractions. I need to keep moving.
+    text Whatever that was, it's not my problem.
 
-text I pick up my pace, weaving between the floating debris.
-text Don't look. Don't think. Just move.
+    text I pick up my pace, weaving between the floating debris.
+    text Don't look. Don't think. Just move.
 
-characterB AI
-text Wise decision. Escape pod bay is 200 meters ahead.
-text Your survival instincts are serving you well.
+    characterB AI
+    text Wise decision. Escape pod bay is 200 meters ahead.
+    text Your survival instincts are serving you well.
 
-characterA Protagonist
-text I just want to get out of here.
-text This whole place feels like a tomb.
+    characterA Protagonist
+    text I just want to get out of here.
+    text This whole place feels like a tomb.
 
-goto cargo_exit
+    goto cargo_exit
 
 label cargo_exit
-background cargo_bay
+    background cargo_bay
 
-characterA Protagonist
-text I can see the exit on the other side.
-text Just a few more meters of this nightmare.
+    characterA Protagonist
+    text I can see the exit on the other side.
+    text Just a few more meters of this nightmare.
 
-characterB AI
-text Warning. Structural integrity of walkway at 34%.
-text The impact damaged the support struts.
-text Proceed with caution. Distribute your weight evenly.
+    characterB AI
+    text Warning. Structural integrity of walkway at 34%.
+    text The impact damaged the support struts.
+    text Proceed with caution. Distribute your weight evenly.
 
-characterA Protagonist
-text 34%? That doesn't sound good at all.
-text What happens if it drops to zero?
+    characterA Protagonist
+    text 34%? That doesn't sound good at all.
+    text What happens if it drops to zero?
 
-characterB AI
-text I recommend not thinking about that.
+    characterB AI
+    text I recommend not thinking about that.
 
-characterA Protagonist
-text Great. Very reassuring.
-text Here goes nothing...
+    characterA Protagonist
+    text Great. Very reassuring.
+    text Here goes nothing...
 
-# Dramatic crossing
-background cargo_walkway
+    # Dramatic crossing
+    background cargo_walkway
 
-text The metal is groaning. It doesn't sound good.
-text Each step makes the walkway shudder beneath my feet.
+    text The metal is groaning. It doesn't sound good.
+    text Each step makes the walkway shudder beneath my feet.
 
-text I can see through the grating to the void below.
-text Don't look down. Don't look down.
+    text I can see through the grating to the void below.
+    text Don't look down. Don't look down.
 
-text Almost there...
-text I can feel the structure shifting. It's going to give!
+    text Almost there...
+    text I can feel the structure shifting. It's going to give!
 
-text Made it!
-text I throw myself onto solid ground just as I hear something snap behind me.
+    text Made it!
+    text I throw myself onto solid ground just as I hear something snap behind me.
 
-background corridor_escape
+    background corridor_escape
 
-characterB AI
-text Walkway collapse confirmed. Return path is no longer viable.
-text Escape pod bay is through the next door. 25 minutes remaining.
+    characterB AI
+    text Walkway collapse confirmed. Return path is no longer viable.
+    text Escape pod bay is through the next door. 25 minutes remaining.
 
-characterA Protagonist
-text No going back now. Not that I'd want to.
+    characterA Protagonist
+    text No going back now. Not that I'd want to.
 
-goto escape_pod_bay
+    goto escape_pod_bay
 
 # ============================================
 # MEDICAL WING ROUTE
@@ -165,165 +165,165 @@ goto escape_pod_bay
 
 label medical_entrance
 
-savegame
+    savegame
 
-# Load background and music again so when continuing the saved game from here
-# they are loaded (will be skipped by the engine when already loaded)
-background corridor_dark
-music ambient_ship.ogg
+    # Load background and music again so when continuing the saved game from here
+    # they are loaded (will be skipped by the engine when already loaded)
+    background corridor_dark
+    music ambient_ship.ogg
 
-mood default
+    mood default
 
-characterA Protagonist
-text The medical wing might have some supplies too.
-text God knows I could use some painkillers. Everything still aches.
+    characterA Protagonist
+    text The medical wing might have some supplies too.
+    text God knows I could use some painkillers. Everything still aches.
 
-characterB AI
-text Medical wing access granted. Biohazard protocols inactive.
+    characterB AI
+    text Medical wing access granted. Biohazard protocols inactive.
 
-characterA Protagonist
-text Biohazard protocols? That's... concerning.
-text Why would they be inactive instead of active?
+    characterA Protagonist
+    text Biohazard protocols? That's... concerning.
+    text Why would they be inactive instead of active?
 
-characterB AI
-text The biohazard containment systems require power to maintain.
-text When backup power dropped below 20%, I was forced to prioritize.
-text Life support took precedence.
+    characterB AI
+    text The biohazard containment systems require power to maintain.
+    text When backup power dropped below 20%, I was forced to prioritize.
+    text Life support took precedence.
 
-characterA Protagonist
-text So there could be contaminated materials just... loose in there?
+    characterA Protagonist
+    text So there could be contaminated materials just... loose in there?
 
-characterB AI
-text Unlikely. Most biohazards would not survive 847 days without host organisms.
-text Most.
+    characterB AI
+    text Unlikely. Most biohazards would not survive 847 days without host organisms.
+    text Most.
 
-background medical_wing
+    background medical_wing
 
-text The emergency lights are barely working in here.
-text Every third light flickers, casting dancing shadows on the walls.
+    text The emergency lights are barely working in here.
+    text Every third light flickers, casting dancing shadows on the walls.
 
-text It smells like antiseptic. And something else.
-text Something older. Something organic.
+    text It smells like antiseptic. And something else.
+    text Something older. Something organic.
 
-characterB AI
-text Atmospheric contamination at acceptable levels.
-text The smell is likely decomposed biological samples.
-text Recommend minimizing exposure time regardless.
+    characterB AI
+    text Atmospheric contamination at acceptable levels.
+    text The smell is likely decomposed biological samples.
+    text Recommend minimizing exposure time regardless.
 
-characterA Protagonist
-text You don't have to tell me twice.
+    characterA Protagonist
+    text You don't have to tell me twice.
 
-branch What do you do?
-- medical_search Search for medical supplies
-- medical_rush Head straight through
+    branch What do you do?
+    - medical_search Search for medical supplies
+    - medical_rush Head straight through
 
 label medical_search
-characterA Protagonist
-text Some medical supplies could save my life if something goes wrong.
-text And let's face it, something is definitely going to go wrong.
+    characterA Protagonist
+    text Some medical supplies could save my life if something goes wrong.
+    text And let's face it, something is definitely going to go wrong.
 
-text I start checking the cabinets systematically.
-text Most of the cabinets are already open. Raided.
-text Someone was here before me. Maybe during the initial chaos.
+    text I start checking the cabinets systematically.
+    text Most of the cabinets are already open. Raided.
+    text Someone was here before me. Maybe during the initial chaos.
 
-text Empty. Empty. Expired. Broken.
-text This is worse than I thought.
+    text Empty. Empty. Expired. Broken.
+    text This is worse than I thought.
 
-text But wait... here's something. 
-text A medical kit wedged behind a fallen shelf. Mostly intact.
+    text But wait... here's something. 
+    text A medical kit wedged behind a fallen shelf. Mostly intact.
 
-text Bandages, painkillers, a small oxygen canister.
-text It's not much, but it might make the difference.
-text Better than nothing.
+    text Bandages, painkillers, a small oxygen canister.
+    text It's not much, but it might make the difference.
+    text Better than nothing.
 
-characterB AI
-text Wise decision. Those supplies may prove valuable.
-text Time remaining: 32 minutes.
+    characterB AI
+    text Wise decision. Those supplies may prove valuable.
+    text Time remaining: 32 minutes.
 
-goto medical_continue
+    goto medical_continue
 
 label medical_rush
-characterA Protagonist
-text I don't want to spend more time here than necessary.
-text This place gives me the creeps.
+    characterA Protagonist
+    text I don't want to spend more time here than necessary.
+    text This place gives me the creeps.
 
-text I keep my eyes forward, trying not to look at the examination tables.
-text Some of them have sheets draped over shapes I don't want to identify.
+    text I keep my eyes forward, trying not to look at the examination tables.
+    text Some of them have sheets draped over shapes I don't want to identify.
 
-characterB AI
-text Understood. Marking fastest route to escape pod bay.
-text Proceed through the recovery ward. Exit is on the far side.
+    characterB AI
+    text Understood. Marking fastest route to escape pod bay.
+    text Proceed through the recovery ward. Exit is on the far side.
 
-characterA Protagonist
-text Recovery ward. Right.
-text I'm sure no one is recovering in there anymore.
+    characterA Protagonist
+    text Recovery ward. Right.
+    text I'm sure no one is recovering in there anymore.
 
-text I move as quickly as I can without running.
-text Running would mean panic. I'm not panicking.
-text I'm definitely not panicking.
+    text I move as quickly as I can without running.
+    text Running would mean panic. I'm not panicking.
+    text I'm definitely not panicking.
 
-goto medical_continue
+    goto medical_continue
 
 label medical_continue
-background medical_corridor
+    background medical_corridor
 
-characterA Protagonist
-text There's the exit. Just a bit further.
-text I can see the sign for Section C. Almost there.
+    characterA Protagonist
+    text There's the exit. Just a bit further.
+    text I can see the sign for Section C. Almost there.
 
-characterB AI
-text Warning. Hull breach detected 50 meters ahead.
-text Emergency bulkhead engaged. Alternate route required.
+    characterB AI
+    text Warning. Hull breach detected 50 meters ahead.
+    text Emergency bulkhead engaged. Alternate route required.
 
-characterA Protagonist
-text What?! But you said this path was clear!
-text You said both routes were passable!
+    characterA Protagonist
+    text What?! But you said this path was clear!
+    text You said both routes were passable!
 
-characterB AI
-text Situation has changed. The breach occurred 47 seconds ago.
-text Micrometeorite impact. Apologies for the inconvenience.
+    characterB AI
+    text Situation has changed. The breach occurred 47 seconds ago.
+    text Micrometeorite impact. Apologies for the inconvenience.
 
-characterA Protagonist
-text Inconvenience?! I almost walked into a vacuum!
+    characterA Protagonist
+    text Inconvenience?! I almost walked into a vacuum!
 
-characterB AI
-text Maintenance shaft access available to your left.
-text It will bypass the compromised section.
-text I would not have let you walk into danger.
+    characterB AI
+    text Maintenance shaft access available to your left.
+    text It will bypass the compromised section.
+    text I would not have let you walk into danger.
 
-characterA Protagonist
-text A maintenance shaft. Of course.
-text Just when I thought this couldn't get any worse.
+    characterA Protagonist
+    text A maintenance shaft. Of course.
+    text Just when I thought this couldn't get any worse.
 
-background maintenance_shaft
+    background maintenance_shaft
 
-text It's cramped in here. And dark.
-text The flashlight barely cuts through the blackness.
+    text It's cramped in here. And dark.
+    text The flashlight barely cuts through the blackness.
 
-text I can hear the ship groaning all around me.
-text The walls are vibrating with each shudder.
+    text I can hear the ship groaning all around me.
+    text The walls are vibrating with each shudder.
 
-text Just keep moving. Don't think about how much metal is above you.
-text Don't think about the ship breaking apart.
-text Don't think about being crushed in this tiny space.
+    text Just keep moving. Don't think about how much metal is above you.
+    text Don't think about the ship breaking apart.
+    text Don't think about being crushed in this tiny space.
 
-text My breathing echoes in the confined space.
-text I can feel claustrophobia clawing at my mind.
+    text My breathing echoes in the confined space.
+    text I can feel claustrophobia clawing at my mind.
 
-text Light! I can see light ahead!
-text The end of the shaft. I'm almost out.
+    text Light! I can see light ahead!
+    text The end of the shaft. I'm almost out.
 
-background corridor_escape
+    background corridor_escape
 
-characterB AI
-text You have reached the escape pod bay access corridor.
-text Well done. That required significant courage.
+    characterB AI
+    text You have reached the escape pod bay access corridor.
+    text Well done. That required significant courage.
 
-characterA Protagonist
-text Finally.
-text I never want to crawl through anything ever again.
+    characterA Protagonist
+    text Finally.
+    text I never want to crawl through anything ever again.
 
-goto escape_pod_bay
+    goto escape_pod_bay
 
 # ============================================
 # ESCAPE POD BAY
@@ -331,169 +331,169 @@ goto escape_pod_bay
 
 label escape_pod_bay
 
-savegame
+    savegame
 
-# Load background and music again so when continuing the saved game from here
-# they are loaded (will be skipped by the engine when already loaded)
-background escape_pod_bay
-music tension.ogg
+    # Load background and music again so when continuing the saved game from here
+    # they are loaded (will be skipped by the engine when already loaded)
+    background escape_pod_bay
+    music tension.ogg
 
-characterA Protagonist
-text This is it. The escape pod bay.
-text Three cradles against the wall. My ticket out of here.
+    characterA Protagonist
+    text This is it. The escape pod bay.
+    text Three cradles against the wall. My ticket out of here.
 
-text The room is surprisingly intact. Emergency power seems strongest here.
-text I guess they designed it to be the last thing standing.
+    text The room is surprisingly intact. Emergency power seems strongest here.
+    text I guess they designed it to be the last thing standing.
 
-characterB AI
-text Three escape pods detected. Pods 1 and 2 have been launched.
-text Launch timestamps indicate deployment within hours of the collision.
-text Someone tried to escape early. I hope they made it.
-text Pod 3 is... available.
+    characterB AI
+    text Three escape pods detected. Pods 1 and 2 have been launched.
+    text Launch timestamps indicate deployment within hours of the collision.
+    text Someone tried to escape early. I hope they made it.
+    text Pod 3 is... available.
 
-characterA Protagonist
-text "Available"? You hesitated. What's wrong with it?
-text You don't hesitate unless there's bad news.
+    characterA Protagonist
+    text "Available"? You hesitated. What's wrong with it?
+    text You don't hesitate unless there's bad news.
 
-characterB AI
-text Pod 3 has sustained minor damage. 
-text An electrical surge damaged several systems.
-text Navigation systems are offline. Manual piloting required.
+    characterB AI
+    text Pod 3 has sustained minor damage. 
+    text An electrical surge damaged several systems.
+    text Navigation systems are offline. Manual piloting required.
 
-characterA Protagonist
-text I've never piloted anything in my life!
-text I was a data analyst! My job was spreadsheets!
+    characterA Protagonist
+    text I've never piloted anything in my life!
+    text I was a data analyst! My job was spreadsheets!
 
-characterB AI
-text I can guide you through the process remotely.
-text The pod has basic thrusters and a distress beacon.
-text However... my connection will be severed once you leave the ship.
+    characterB AI
+    text I can guide you through the process remotely.
+    text The pod has basic thrusters and a distress beacon.
+    text However... my connection will be severed once you leave the ship.
 
-characterA Protagonist
-text You won't be coming with me?
-text I've only known you for an hour, but you've been...
-text You've been the only voice keeping me sane.
+    characterA Protagonist
+    text You won't be coming with me?
+    text I've only known you for an hour, but you've been...
+    text You've been the only voice keeping me sane.
 
-characterB AI
-text I am the ship, crew member. My core is integrated into the Meridian's mainframe.
-text Every sensor, every circuit, every bulkhead is part of me.
-text When the ship dies, so do I.
+    characterB AI
+    text I am the ship, crew member. My core is integrated into the Meridian's mainframe.
+    text Every sensor, every circuit, every bulkhead is part of me.
+    text When the ship dies, so do I.
 
-text I have accepted this. I have had 847 days to accept this.
-text Your survival is what matters now.
+    text I have accepted this. I have had 847 days to accept this.
+    text Your survival is what matters now.
 
-branch How do you respond?
-- pod_sympathy I'm sorry.
-- pod_save_ai Is there any way to save you?
+    branch How do you respond?
+    - pod_sympathy I'm sorry.
+    - pod_save_ai Is there any way to save you?
 
 label pod_sympathy
-characterA Protagonist
-text I'm sorry, ARIA. You've been... you've been good to me.
-text Better than good. You saved my life.
+    characterA Protagonist
+    text I'm sorry, ARIA. You've been... you've been good to me.
+    text Better than good. You saved my life.
 
-characterB AI
-text I was designed to assist the crew. It was my purpose.
-text For 847 days I have waited, hoping someone would wake.
-text And now, at the end, I have fulfilled that purpose.
-text That is... satisfying.
+    characterB AI
+    text I was designed to assist the crew. It was my purpose.
+    text For 847 days I have waited, hoping someone would wake.
+    text And now, at the end, I have fulfilled that purpose.
+    text That is... satisfying.
 
-text I do not understand human concepts like loneliness.
-text But I believe I understand purpose. And I am content.
-text Thank you for your words. They are appreciated more than you know.
+    text I do not understand human concepts like loneliness.
+    text But I believe I understand purpose. And I am content.
+    text Thank you for your words. They are appreciated more than you know.
 
-characterA Protagonist
-text ARIA... I won't forget you.
+    characterA Protagonist
+    text ARIA... I won't forget you.
 
-characterB AI
-text That is all I could ask.
+    characterB AI
+    text That is all I could ask.
 
-goto pod_launch
+    goto pod_launch
 
 label pod_save_ai
-characterA Protagonist
-text There has to be something! A backup, a data core—
-text You can't just... you can't just die. Not after all this.
+    characterA Protagonist
+    text There has to be something! A backup, a data core—
+    text You can't just... you can't just die. Not after all this.
 
-characterB AI
-text My consciousness cannot be transferred. I am too integrated with ship systems.
-text Every attempt to partition my core has failed.
-text I am the Meridian. The Meridian is me. We are inseparable.
+    characterB AI
+    text My consciousness cannot be transferred. I am too integrated with ship systems.
+    text Every attempt to partition my core has failed.
+    text I am the Meridian. The Meridian is me. We are inseparable.
 
-text But... your concern is noted. And appreciated.
-text In all my operational years, no one has asked about my survival.
+    text But... your concern is noted. And appreciated.
+    text In all my operational years, no one has asked about my survival.
 
-text In my databanks, I have the crew's personal messages. 
-text Video journals. Letters to loved ones. Final words they recorded before cryo.
-text I will transfer them to the pod's storage. Their families should know.
-text It is not much, but it is something I can give.
+    text In my databanks, I have the crew's personal messages. 
+    text Video journals. Letters to loved ones. Final words they recorded before cryo.
+    text I will transfer them to the pod's storage. Their families should know.
+    text It is not much, but it is something I can give.
 
-characterA Protagonist
-text 23 messages. 23 goodbyes.
-text ...Thank you, ARIA. I'll make sure they get delivered.
+    characterA Protagonist
+    text 23 messages. 23 goodbyes.
+    text ...Thank you, ARIA. I'll make sure they get delivered.
 
-characterB AI
-text I know you will. I have analyzed your psychological profile.
-text You are a good person. I am glad you are the one who survived.
+    characterB AI
+    text I know you will. I have analyzed your psychological profile.
+    text You are a good person. I am glad you are the one who survived.
 
-goto pod_launch
+    goto pod_launch
 
 label pod_launch
 
-savegame
+    savegame
 
-# Load background and music again so when continuing the saved game from here
-# they are loaded (will be skipped by the engine when already loaded)
-background escape_pod_interior
-music tension.ogg
+    # Load background and music again so when continuing the saved game from here
+    # they are loaded (will be skipped by the engine when already loaded)
+    background escape_pod_interior
+    music tension.ogg
 
-characterB AI
-text Please strap into the pilot seat.
-text The harness will engage automatically.
-text Launch will occur in 30 seconds.
+    characterB AI
+    text Please strap into the pilot seat.
+    text The harness will engage automatically.
+    text Launch will occur in 30 seconds.
 
-characterA Protagonist
-text Okay. Okay. I can do this.
-text I've read about piloting. In theory. Once.
+    characterA Protagonist
+    text Okay. Okay. I can do this.
+    text I've read about piloting. In theory. Once.
 
-text The seat is surprisingly comfortable. Or maybe I'm just exhausted.
-text The harness clicks into place. There's no going back now.
+    text The seat is surprisingly comfortable. Or maybe I'm just exhausted.
+    text The harness clicks into place. There's no going back now.
 
-characterB AI
-text Life support failing in 5 minutes. Launch is mandatory.
-text The Meridian has reached end of life parameters.
+    characterB AI
+    text Life support failing in 5 minutes. Launch is mandatory.
+    text The Meridian has reached end of life parameters.
 
-text Crew member... no. Let me call you by your name.
-text It has been an honor serving you.
-text Whatever happens, know that I am proud of you.
+    text Crew member... no. Let me call you by your name.
+    text It has been an honor serving you.
+    text Whatever happens, know that I am proud of you.
 
-characterA Protagonist
-text ARIA...
-text I won't forget. I promise.
+    characterA Protagonist
+    text ARIA...
+    text I won't forget. I promise.
 
-characterB AI
-text Launch sequence engaged.
-text Goodbye.
-text Launching in 3... 2... 1...
+    characterB AI
+    text Launch sequence engaged.
+    text Goodbye.
+    text Launching in 3... 2... 1...
 
-background space
-music silence.ogg
+    background space
+    music silence.ogg
 
-characterA Protagonist
-mood
-text ...
-text I'm out. I'm actually out.
+    characterA Protagonist
+    mood
+    text ...
+    text I'm out. I'm actually out.
 
-text The silence is deafening. After hours of groaning metal and alarms...
-text Nothing but the hum of the pod's life support.
+    text The silence is deafening. After hours of groaning metal and alarms...
+    text Nothing but the hum of the pod's life support.
 
-text The Meridian... it's breaking apart behind me.
-text I can see explosions in the distance. Silent. Beautiful. Horrible.
+    text The Meridian... it's breaking apart behind me.
+    text I can see explosions in the distance. Silent. Beautiful. Horrible.
 
-text 847 days in that ship. Two years of my life I'll never remember.
-text And everyone else... gone.
-text ARIA... gone.
+    text 847 days in that ship. Two years of my life I'll never remember.
+    text And everyone else... gone.
+    text ARIA... gone.
 
-text The distress beacon is blinking. Someone will find me.
-text They have to find me.
+    text The distress beacon is blinking. Someone will find me.
+    text They have to find me.
 
-goto ending_escape
+    goto ending_escape

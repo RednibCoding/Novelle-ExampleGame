@@ -53,6 +53,7 @@ The `include` command:
 
 - **Comments** start with `#` and are ignored
 - **Empty lines** are ignored (use them freely for readability)
+- **Indentation** is optional and ignored (use it for readability)
 - **Commands** are written one per line: `command arguments`
 - **Labels** are defined with `label labelname`
 
