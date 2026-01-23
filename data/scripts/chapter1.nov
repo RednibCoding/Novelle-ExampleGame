@@ -1,206 +1,166 @@
 # Chapter 1: Awakening
 # The player wakes up in a damaged cryo pod
 
-intro:
-    bg none
-    
-    characterA ???
-    t ...ystem reboot... emergency protocol...
-    t ...vital signs detected... initiating revival sequence...
-    
-    fade 1.0
-    
-    bg cryo_room.png
-    music ambient_ship.ogg
-    
-    characterA Protagonist
-    moodA weak
-    t Ugh... my head...
-    t It feels like someone filled my skull with broken glass.
-    t Where am I? Everything hurts.
-    
-    
-    t The air is cold. Too cold. And there's a smell...
-    t Burnt plastic. Ozone. Something else I don't want to identify.
-    
-    
-    t I try to move, but my limbs feel like lead.
-    t How long have I been asleep?
-    
-    characterB AI
-    t Crew member detected. Initiating status report.
-    t Please remain calm. Your body is recovering from extended cryogenic stasis.
-    t You have been in cryogenic stasis for approximately 847 days.
-    
-    characterA Protagonist
-    t 847 days?! That's... over two years!
-    t That can't be right. The mission was only supposed to be 6 months!
-    
-    characterB AI
-    t Correct. The original mission parameters have been... significantly altered.
-    t Emergency revival was triggered due to critical ship damage.
-    t Life support failing. Estimated time remaining: 45 minutes.
-    
-    characterA Protagonist
-    t 45 minutes? That's all I have?
-    t This has to be some kind of nightmare.
-    
-    characterB AI
-    t I assure you, this situation is very real.
-    t I recommend focusing on survival. I will assist you.
-    
-    branch What do you do?
-        ask_ship Ask about the ship
-        ask_crew Ask about the crew
-        cryo_exit Look for an exit immediately
+label intro
+background
 
-ask_ship:
-    characterA Protagonist
-    t What happened to the ship?
-    t Why am I waking up two years late?
-    
-    characterB AI
-    t The USV Meridian suffered a catastrophic collision with uncharted debris.
-    t The debris field was not on any navigational charts.
-    t Initial impact occurred 847 days, 14 hours, and 23 minutes ago.
-    
-    characterA Protagonist
-    t A debris field? In deep space?
-    
-    characterB AI
-    t Hull breaches detected on decks 3 through 7. Primary reactor offline.
-    t Backup power at 12% and declining.
-    t The ship has been slowly dying since the collision.
-    
-    characterA Protagonist
-    t Slowly dying... for over two years?
-    t Is there any way to fix it?
-    
-    characterB AI
-    t Negative. Structural integrity is compromised beyond repair.
-    t I have been maintaining minimal life support while searching for survivors.
-    t You are the first to revive successfully.
-    t Recommended course of action: evacuation via escape pod.
-    
-    characterA Protagonist
-    t The first to revive... what about the others?
-    
-    characterB AI
-    t ...
-    t We should focus on your evacuation.
-    
-    goto cryo_exit
+characterA ???
+text ...ystem reboot... emergency protocol...
+text ...vital signs detected... initiating revival sequence...
 
-ask_crew:
-    characterA Protagonist
-    t What about the rest of the crew?
-    t There were 24 of us. Where is everyone?
-    
-    characterB AI
-    t ...
-    
-    
-    t I have been dreading this question.
-    t Of the 24 crew members aboard, you are the only survivor.
-    
-    characterA Protagonist
-    t What? No, that's... that's impossible!
-    
-    characterB AI
-    t Cryo pod malfunctions claimed 19 lives.
-    t The power fluctuations from the collision caused cascade failures.
-    t I tried to reroute power, but I could not save them all.
-    t I could barely save you.
-    
-    characterA Protagonist
-    t And the remaining 4?
-    
-    characterB AI
-    t Their life signs terminated during the initial collision.
-    t Captain Reyes was on the bridge. Engineer Tanaka in the reactor room.
-    t Doctors Chen and Vasquez in the medical wing.
-    t They died instantly. I... I am sorry. I was unable to protect them.
-    
-    characterA Protagonist
-    t Captain Reyes... Tanaka... 
-    t I knew them. I had dinner with them the night before we went into cryo.
-    t ...I see.
-    
-    characterB AI
-    t I understand if you need a moment.
-    t But time is limited. We must proceed.
-    
-    goto cryo_exit
+hideoverlay
 
-cryo_exit:
-    characterA Protagonist
-    t I need to find the escape pod. Where is it?
-    t Just tell me where to go.
-    
-    characterB AI
-    t Escape pod bay is located on Deck 2, Section C.
-    t Under normal circumstances, it would be a 3 minute walk.
-    t However... Warning: Direct route is blocked by debris.
-    
-    characterA Protagonist
-    t Of course it is. What are my options?
-    
-    characterB AI
-    t I have analyzed the structural integrity of all possible paths.
-    t You will need to navigate through the cargo bay or the medical wing.
-    t Both routes carry some risk, but they are passable.
-    
-    characterA Protagonist
-    t Great. A choice between bad and worse.
-    
-    characterB AI
-    t I will guide you regardless of which path you choose.
-    t You will not be alone.
-    
-    characterA Protagonist
-    t ...Thanks. I think I needed to hear that.
-    
-    branch Which route do you take?
-        cargo_entrance Go through the Cargo Bay
-        medical_entrance Go through the Medical Wing
-        search_cryo Search the cryo room first
+fade 1.0 ...
 
-search_cryo:
-    bg cryo_room.png
-    
-    characterA Protagonist
-    t Maybe I should look around here first. There might be something useful.
-    t I can't just rush into this unprepared.
-    
-    
-    t The cryo room is a mess. Frost covers everything.
-    t Some of the monitoring equipment is sparking.
-    
-    t The other cryo pods... they're all dark. Empty.
-    t No, not empty. I can see shadows inside some of them.
-    
-    
-    t I shouldn't look too closely.
-    t I don't want to see their faces. I knew these people.
-    
-    
-    t Focus. I need to survive. For them if not for myself.
-    
-    
-    t There's a locker by the wall. Standard emergency kit.
-    t The lock is broken, probably from the impact.
-    
-    # Player finds a flashlight
-    t A flashlight. Still has some charge. This could be useful.
-    t And a small tool kit. Might come in handy.
-    
-    characterB AI
-    t I recommend proceeding to the escape pod bay. Time is limited.
-    t You now have 38 minutes remaining.
-    
-    characterA Protagonist
-    t Right. No more delays.
-    
-    branch Which route do you take?
-        cargo_entrance Go through the Cargo Bay
-        medical_entrance Go through the Medical Wing
+
+background cryo_room
+music ambient_ship.ogg
+
+characterA Protagonist
+mood weak
+text Ugh... my head...
+text It feels like someone filled my skull with broken glass.
+text Where am I? Everything hurts.
+
+text The air is cold. Too cold. And there's a smell...
+text Burnt plastic. Ozone. Something else I don't want to identify.
+
+text I try to move, but my limbs feel like lead.
+text How long have I been asleep?
+
+characterB AI
+text Crew member detected. Initiating status report.
+text Please remain calm. Your body is recovering from extended cryogenic stasis.
+text You have been in cryogenic stasis for approximately 847 days.
+
+characterA Protagonist
+mood weak
+text 847 days?! That's... over two years!
+text That can't be right. The mission was only supposed to be 6 months!
+
+characterB AI
+text Correct. The original mission parameters have been... significantly altered.
+text Emergency revival was triggered due to critical ship damage.
+text Life support failing. Estimated time remaining: 45 minutes.
+
+characterA Protagonist
+mood weak
+text 45 minutes? That's all I have?
+text This has to be some kind of nightmare.
+
+characterB AI
+text I assure you, this situation is very real.
+text I recommend focusing on survival. I will assist you.
+
+branch What do you do?
+- ask_ship Ask about the ship
+- ask_crew Ask about the crew
+
+label ask_ship
+savegame
+characterA Protagonist
+mood weak
+text What happened to the ship?
+text Why am I waking up two years late?
+
+characterB AI
+text The USV Meridian suffered a catastrophic collision with uncharted debris.
+text The debris field was not on any navigational charts.
+text Initial impact occurred 847 days, 14 hours, and 23 minutes ago.
+
+characterA Protagonist
+mood weak
+text A debris field? In deep space?
+
+characterB AI
+text Hull breaches detected on decks 3 through 7. Primary reactor offline.
+text Backup power at 12% and declining.
+text The ship has been slowly dying since the collision.
+
+characterA Protagonist
+mood weak
+text Slowly dying... for over two years?
+text Is there any way to fix it?
+
+characterB AI
+text Negative. Structural integrity is compromised beyond repair.
+text I have been maintaining minimal life support while searching for survivors.
+text You are the first to revive successfully.
+text Recommended course of action: evacuation via escape pod.
+
+characterA Protagonist
+mood weak
+text The first to revive... what about the others?
+
+characterB AI
+text ...
+text We should focus on your evacuation.
+
+goto cryo_exit
+
+label ask_crew
+characterA Protagonist
+mood weak
+text What about the rest of the crew?
+text There were 24 of us. Where is everyone?
+
+characterB AI
+text ...
+
+text I have been dreading this question.
+text Of the 24 crew members aboard, you are the only survivor.
+
+characterA Protagonist
+mood weak
+text What? No, that's... that's impossible!
+
+characterB AI
+text Cryo pod malfunctions claimed 19 lives.
+text The power fluctuations from the collision caused cascade failures.
+text I tried to reroute power, but I could not save them all.
+text I could barely save you.
+
+characterA Protagonist
+mood weak
+text And the remaining 4?
+
+characterB AI
+text Their life signs terminated during the initial collision.
+text Captain Reyes was on the bridge. Engineer Tanaka in the reactor room.
+text Doctors Chen and Vasquez in the medical wing.
+text They died instantly. I... I am sorry. I was unable to protect them.
+
+characterA Protagonist
+mood weak
+text Captain Reyes... Tanaka... 
+text I knew them. I had dinner with them the night before we went into cryo.
+text ...I see.
+
+characterB AI
+text I understand if you need a moment.
+text But time is limited. We must proceed.
+
+goto cryo_exit
+
+label cryo_exit
+characterA Protagonist
+mood weak
+text I need to find the escape pod. Where is it?
+text Just tell me where to go.
+
+characterB AI
+text Escape pod bay is located on Deck 2, Section C.
+text Under normal circumstances, it would be a 3 minute walk.
+text However... Warning: Direct route is blocked by debris.
+
+characterA Protagonist
+mood weak
+text Of course it is. What are my options?
+
+characterB AI
+text I have analyzed the structural integrity of all possible paths.
+text You will need to navigate through the cargo bay or the medical wing.
+
+branch Which path do you choose?
+- cargo_entrance Go through the cargo bay
+- medical_entrance Go through the medical wing

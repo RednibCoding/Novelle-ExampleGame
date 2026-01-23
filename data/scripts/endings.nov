@@ -1,96 +1,86 @@
 # Endings
 # Different endings based on player choices and circumstances
 
-ending_escape:
-    bg space.png
-    music ending_theme.ogg
-    
-    characterA Protagonist
-    moodA none
-    t The navigation is dead. I'm drifting.
-    t Just a tiny speck in the infinite darkness.
-    
-    
-    t But the distress beacon is working. Someone will find me.
-    t They have to.
-    
-    
-    t The stars are beautiful out here. I never noticed before.
-    t On the ship, I was always too busy with work to look.
-    t Maybe that's the universe's cruel joke.
-    t You only see the beauty when everything falls apart.
-    
-    
-    t I think about the others. The 23 people who didn't make it.
-    t Captain Reyes with her terrible jokes. Tanaka always fixing things.
-    t Dr. Chen who taught me to play chess. Vasquez who always had coffee ready.
-    
-    
-    t I think about ARIA, alone in that dying ship until the very end.
-    t Counting down the seconds. Waiting for the final shutdown.
-    t She never complained. Never wavered. Just... served.
-    
-    
-    t But I'm alive.
-    t Against all odds, I'm alive.
-    t That has to mean something.
-    
+label ending_escape
+background space
+music ending_theme.ogg
 
-    fade 2.0 Three days later...
-    
-    bg rescue_ship.png
+characterA Protagonist
+mood
+text The navigation is dead. I'm drifting.
+text Just a tiny speck in the infinite darkness.
 
-    characterA Protagonist
-    moodA none
-    
-    t When the rescue ship found me, I was nearly out of oxygen.
-    t Four hours left. Maybe less.
-    t They said it was a miracle. One survivor out of 24.
-    
-    
-    t The rescue crew looked at me like I was a ghost.
-    t Maybe I am. The ghost of the USV Meridian.
-    
-    
-    t I gave them the data core. ARIA's final gift.
-    t 23 goodbye messages, delivered to 23 families.
-    t Videos of birthdays and anniversaries. Confessions of love. Apologies never spoken.
-    
-    
-    t When I watched them, I cried for hours.
-    t But those families deserved to hear those words.
-    t ARIA made sure of that.
-    
-    
-    t I still hear her voice sometimes.
-    t In the quiet moments. When I'm alone.
-    t "It has been an honor serving you."
-    
-    
-    t The honor was mine, ARIA.
-    t The honor was mine.
+text But the distress beacon is working. Someone will find me.
+text They have to.
 
-    
-    fade 4.0 DERELICT
-    
-    fade 4.0 The End
-    
-    fade 4.0 Thank you for playing
-    
-    goto credits
+text The stars are beautiful out here. I never noticed before.
+text On the ship, I was always too busy with work to look.
+text Maybe that's the universe's cruel joke.
+text You only see the beauty when everything falls apart.
 
-credits:
-    
-    fade 4.0 CREDITS
-    
-    fade 4.0 Written with Novelle Engine (by RednibCoding)
-    
-    fade 4.0 A short story about survival
-    
-    fade 4.0 and the connections we make
-    
-    fade 4.0 even in the darkest places.
-    
-    fade 4.0 Even when we think we're alone...
-    
-    fade 4.0 someone is always watching over us.
+text I think about the others. The 23 people who didn't make it.
+text Captain Reyes with her terrible jokes. Tanaka always fixing things.
+text Dr. Chen who taught me to play chess. Vasquez who always had coffee ready.
+
+text I think about ARIA, alone in that dying ship until the very end.
+text Counting down the seconds. Waiting for the final shutdown.
+text She never complained. Never wavered. Just... served.
+
+text But I'm alive.
+text Against all odds, I'm alive.
+text That has to mean something.
+
+fade 2.0 Three days later...
+
+background rescue_ship
+
+characterA Protagonist
+mood
+
+text When the rescue ship found me, I was nearly out of oxygen.
+text Four hours left. Maybe less.
+text They said it was a miracle. One survivor out of 24.
+
+text The rescue crew looked at me like I was a ghost.
+text Maybe I am. The ghost of the USV Meridian.
+
+text I gave them the data core. ARIA's final gift.
+text 23 goodbye messages, delivered to 23 families.
+text Videos of birthdays and anniversaries. Confessions of love. Apologies never spoken.
+
+text When I watched them, I cried for hours.
+text But those families deserved to hear those words.
+text ARIA made sure of that.
+
+text I still hear her voice sometimes.
+text In the quiet moments. When I'm alone.
+text "It has been an honor serving you."
+
+text The honor was mine, ARIA.
+text The honor was mine.
+
+fade 4.0 DERELICT
+
+fade 4.0 The End
+
+fade 4.0 Thank you for playing
+
+goto credits
+
+label credits
+
+fade 4.0 CREDITS
+
+fade 4.0 Written with Novelle Engine (by RednibCoding)
+
+fade 4.0 A short story about survival
+
+fade 4.0 and the connections we make
+
+fade 4.0 even in the darkest places.
+
+fade 4.0 Even when we think we're alone...
+
+fade 4.0 someone is always watching over us.
+
+finish
