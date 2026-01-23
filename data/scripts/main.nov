@@ -5,7 +5,7 @@ include chapter1 chapter2 endings
 
 label _setup
     # Global settings
-    typing key.ogg
+    typing type.ogg
 
     # Character aliases
     alias ??? Unknown Voice
