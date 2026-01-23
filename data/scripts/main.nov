@@ -13,8 +13,13 @@ alias ??? Unknown Voice
 alias AI ARIA-7
 alias Protagonist You
 
+background title_bg
+music title_theme.ogg
+wait
+
 label _start
 # Start the game
+background
 showoverlay ARIA
 wait 2.0
 goto intro

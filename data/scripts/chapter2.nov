@@ -6,8 +6,15 @@
 # ============================================
 
 label cargo_entrance
-mood default
+
+savegame
+
+# Load background and music again so when continuing the saved game from here
+# they are loaded (will be skipped by the engine when already loaded)
 background corridor_dark
+music ambient_ship.ogg
+
+mood default
 
 characterA Protagonist
 text The cargo bay should be through here.
@@ -157,9 +164,15 @@ goto escape_pod_bay
 # ============================================
 
 label medical_entrance
-mood default
 
+savegame
+
+# Load background and music again so when continuing the saved game from here
+# they are loaded (will be skipped by the engine when already loaded)
 background corridor_dark
+music ambient_ship.ogg
+
+mood default
 
 characterA Protagonist
 text The medical wing might have some supplies too.
@@ -317,6 +330,11 @@ goto escape_pod_bay
 # ============================================
 
 label escape_pod_bay
+
+savegame
+
+# Load background and music again so when continuing the saved game from here
+# they are loaded (will be skipped by the engine when already loaded)
 background escape_pod_bay
 music tension.ogg
 
@@ -420,7 +438,13 @@ text You are a good person. I am glad you are the one who survived.
 goto pod_launch
 
 label pod_launch
+
+savegame
+
+# Load background and music again so when continuing the saved game from here
+# they are loaded (will be skipped by the engine when already loaded)
 background escape_pod_interior
+music tension.ogg
 
 characterB AI
 text Please strap into the pilot seat.

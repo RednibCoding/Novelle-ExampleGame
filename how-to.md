@@ -69,7 +69,7 @@ label intro
 # Jump to another label
 goto intro
 
-# Wait for user input (click/space/enter) before continuing
+# Wait for user input (click/touch/space/enter) before continuing
 wait
 
 # Wait for a specific duration (in seconds) before continuing
@@ -410,7 +410,7 @@ finish
 | Input | Action |
 |-------|--------|
 | Space / Enter / Click / Touch | Advance dialogue / Select option |
-| 1 / 2 | Select choice 1 or 2 directly |
+| 1 / 2 / 3 / 4 | Select choice directly (if that option exists) |
 
 ---
 

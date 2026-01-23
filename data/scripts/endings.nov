@@ -2,6 +2,9 @@
 # Different endings based on player choices and circumstances
 
 label ending_escape
+
+savegame
+
 background space
 music ending_theme.ogg
 

@@ -57,7 +57,7 @@ branch What do you do?
 - ask_crew Ask about the crew
 
 label ask_ship
-savegame
+
 characterA Protagonist
 mood weak
 text What happened to the ship?
